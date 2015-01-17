@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // [Optional] Power your app with Local Datastore. For more info, go to
+        // https://parse.com/docs/ios_guide#localdatastore/iOS
+        Parse.enableLocalDatastore();
+        
+        // Initialize Parse.
+        Parse.setApplicationId("dnzQeib9hrrvYIGRXJ9XfWyHklR9fdfzVR2p8l0T",
+        clientKey:"Tsz6FxLNyR1cjX0PCT7abRLRtLbXP0gx4YsCW09c");
+        
+        /*
+        for i in 0..<10 {
+            var post = PFObject(className: "Post");
+            post["Description"] = "description of an event"
+            post["Downvotes"] = 69
+            //        post["Location"]
+            post["Title"] = "orgy"
+            post["Upvotes"] = 70
+            post.saveInBackgroundWithTarget(nil, selector: nil)
+        }
+        
+        
+        var post = PFObject(className:"Post")
+        post["Description"] = "descriptoin of an event"
+        post["Downvotes"] = 69
+//        post["Location"]
+        post["Title"] = "orgy"
+        post["Upvotes"] = 70
+        post.saveInBackgroundWithTarget(nil, selector: nil)
+
+*/
+        
         return true
     }
 

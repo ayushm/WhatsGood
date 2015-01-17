@@ -27,6 +27,7 @@
 		1AB9ACEB1A6A89E800489D30 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB9ACEA1A6A89E800489D30 /* SystemConfiguration.framework */; };
 		1AB9ACED1A6A89F300489D30 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB9ACEC1A6A89F300489D30 /* libz.dylib */; };
 		1AB9ACEF1A6A89FD00489D30 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB9ACEE1A6A89FD00489D30 /* libsqlite3.dylib */; };
+		1AB9ACF21A6A92C200489D30 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB9ACF11A6A92C200489D30 /* EventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		1AB9ACEA1A6A89E800489D30 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1AB9ACEC1A6A89F300489D30 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1AB9ACEE1A6A89FD00489D30 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		1AB9ACF11A6A92C200489D30 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				1AB9ACB61A6A7ACC00489D30 /* NewEventViewController.swift */,
 				1AB9ACD41A6A81DC00489D30 /* EventsListViewController.swift */,
 				1AB9ACB81A6A7ACC00489D30 /* Main.storyboard */,
+				1AB9ACF11A6A92C200489D30 /* EventViewController.swift */,
 				1AB9ACBB1A6A7ACC00489D30 /* Images.xcassets */,
 				1AB9ACBD1A6A7ACC00489D30 /* LaunchScreen.xib */,
 				1AB9ACB21A6A7ACB00489D30 /* Supporting Files */,
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB9ACB71A6A7ACC00489D30 /* NewEventViewController.swift in Sources */,
+				1AB9ACF21A6A92C200489D30 /* EventViewController.swift in Sources */,
 				1AB9ACD51A6A81DC00489D30 /* EventsListViewController.swift in Sources */,
 				1AB9ACB51A6A7ACC00489D30 /* AppDelegate.swift in Sources */,
 			);
@@ -479,6 +483,7 @@
 				1AB9ACD01A6A7ACC00489D30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AB9ACD11A6A7ACC00489D30 /* Build configuration list for PBXNativeTarget "WhatsGoodTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +492,7 @@
 				1AB9ACD31A6A7ACC00489D30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
