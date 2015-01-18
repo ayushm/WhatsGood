@@ -16,43 +16,43 @@ class EventItem: NSObject {
     var upVotes: Int
     var downVotes: Int
     // var location: PFGeoPoint // has latitude, longitude attributes
-    // var startTime: Date
+    var startTime: NSDate
     // var endTime: Date
     
-    init (values: PFObject) {
-        /*Parse.enableLocalDatastore();
-        Parse.setApplicationId("dnzQeib9hrrvYIGRXJ9XfWyHklR9fdfzVR2p8l0T",
-            clientKey:"Tsz6FxLNyR1cjX0PCT7abRLRtLbXP0gx4YsCW09c");*/
-        
+    init (values: PFObject) { // takes the PFObject returned by parse
         self.id = values.valueForKey("objectId") as String
         self.title = values["Title"] as String
         self.desc = values["Description"] as String
         self.upVotes = values["Upvotes"] as Int
         self.downVotes = values["Downvotes"] as Int
         // self.location = values["Location"] as PFGeoPoint
-        // self.startTime = values["startTime"] as Date
+        self.startTime = values["startTime"] as NSDate
+        NSLog(String(format: "%@", startTime))
         // self.endTime = values["endTime"] as Date
+        
+        var dateFormatter: NSDateFormatter = NSDateFormatter() // HOW TO PRINT THE DATE
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        var strDate = dateFormatter.stringFromDate(startTime)
+        NSLog(strDate)
     }
     
-    func upVote () {
-        // check they havent voted yet
-        
-        // then do this stuff
+    func vote (upOrDown: Int) { // takes an int 1 = upvote, 0 = downvote
         var query = PFQuery(className:"Post")
         query.getObjectInBackgroundWithId(self.id) {
             (event: PFObject!, error: NSError!) -> Void in
             if error != nil {
                 NSLog("%@", error)
             } else {
-                event["Upvotes"] = self.upVotes + 1
-                event["score"] = 1338
+                if upOrDown == 1 {
+                    event["Upvotes"] = self.upVotes + 1
+                } else {
+                    event["Downvotes"] = self.downVotes + 1
+                }
+                
                 event.saveInBackgroundWithTarget(nil, selector: nil)
+                NSLog("saved update")
             }
         }
-    }
-    
-    func downVote () {
-        // check they haven't voted yet
-        
     }
 }

@@ -13,13 +13,14 @@ class EventsManager {
     var events = [EventItem]()
     
     init () {
+        Parse.enableLocalDatastore();
+        Parse.setApplicationId("dnzQeib9hrrvYIGRXJ9XfWyHklR9fdfzVR2p8l0T",
+            clientKey:"Tsz6FxLNyR1cjX0PCT7abRLRtLbXP0gx4YsCW09c");
         reloadEvents()
     }
     
     func reloadEvents () {
-        Parse.enableLocalDatastore();
-        Parse.setApplicationId("dnzQeib9hrrvYIGRXJ9XfWyHklR9fdfzVR2p8l0T",
-            clientKey:"Tsz6FxLNyR1cjX0PCT7abRLRtLbXP0gx4YsCW09c");
+        events = [EventItem]()
         
         var query = PFQuery(className: "Post")
         var eventObjs = query.findObjects()
@@ -27,13 +28,5 @@ class EventsManager {
         for event in eventObjs {
             events.append(EventItem(values: event as PFObject))
         }
-    }
-    
-    func upVote (event: EventItem) {
-        
-    }
-    
-    func downVote (event: EventItem) {
-        
     }
 }

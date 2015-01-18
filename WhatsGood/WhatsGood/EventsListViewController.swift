@@ -12,8 +12,6 @@ class EventsListViewController: UITableViewController {
     var eventsList = EventsManager()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        NSLog("Size of eventslist is \(eventsList.events.count)")
-        
         return eventsList.events.count
     }
     
@@ -22,8 +20,18 @@ class EventsListViewController: UITableViewController {
         let event = eventsList.events[indexPath.row]
         
         //set attributes right here
-        cell.setEvent(event)
+        eventsList.reloadEvents()
+        cell.setEvent(event, ref: self.tableView)
+        
+        NSLog("at least it refreshed! bb")
         
         return cell
     }
+    
+    /*override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        NSLog("sup")
+        
+        eventsList.reloadEvents()
+        self.tableView.reloadData()
+    }*/
 }

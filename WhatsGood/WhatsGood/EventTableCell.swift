@@ -16,25 +16,33 @@ class EventTableCell: UITableViewCell {
     @IBOutlet var descrip: UILabel!
     
     var event: EventItem!
+    weak var reference: UITableView!
     
-    func setEvent (event: EventItem) {
+    func setEvent (event: EventItem, ref: UITableView) {
         self.event = event
+        self.reference = ref
         refresh()
     }
     
-    private func refresh () {
+    func refresh () {
         self.title.text = self.event.title
-        self.votes.text = String(self.event.upVotes)
+        self.votes.text = String(self.event.upVotes-self.event.downVotes)
         self.descrip.text = self.event.desc
     }
     
     @IBAction func upVote(sender: AnyObject) {
         NSLog("upvote pressed")
-        self.event.upVote()
+        self.event.vote(1) // 1 = upvote
+        NSLog(String(self.event.upVotes-self.event.downVotes))
+        refresh()
+        self.reference.reloadData()
     }
     
     @IBAction func downVote(sender: AnyObject) {
         NSLog("downvote pressed")
-        self.event.downVote()
+        self.event.vote(0) // 0 = downvote
+        NSLog(String(self.event.upVotes-self.event.downVotes))
+        refresh()
+        self.reference.reloadData()
     }
 }
