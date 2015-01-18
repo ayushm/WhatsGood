@@ -12,14 +12,17 @@ class EventsListViewController: UITableViewController {
     var eventsList = EventsManager()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        NSLog("Size of eventslist is \(eventsList.events.count)")
+        
         return eventsList.events.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("EventsListCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("EventsListCell", forIndexPath: indexPath) as EventTableCell
         let event = eventsList.events[indexPath.row]
         
-        //cell.textLabel!.text = event.title will overwrite the title of the cell, and run over random shit
+        //set attributes right here
+        cell.setEvent(event)
         
         return cell
     }

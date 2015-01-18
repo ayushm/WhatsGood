@@ -28,4 +28,12 @@ class EventsManager {
             events.append(EventItem(values: event as PFObject))
         }
     }
+    
+    func upVote (event: EventItem) {
+        
+    }
+    
+    func downVote (event: EventItem) {
+        
+    }
 }

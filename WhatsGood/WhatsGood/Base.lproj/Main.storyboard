@@ -32,31 +32,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventsListCell" rowHeight="121" id="lR5-5h-wGQ" customClass="CellViewController">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventsListCell" rowHeight="121" id="lR5-5h-wGQ" customClass="EventTableCell" customModule="WhatsGood" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lR5-5h-wGQ" id="LfN-D4-u1z">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="543" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ge-Up-S3k">
-                                            <rect key="frame" x="8" y="40" width="46" height="33"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTn-9k-fRf">
-                                            <rect key="frame" x="8" y="81" width="46" height="30"/>
-                                            <state key="normal" title="Button">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTn-9k-fRf">
+                                            <rect key="frame" x="11" y="67" width="40" height="40"/>
+                                            <state key="normal" title="Button" image="down_arrow.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="downVote:" destination="lR5-5h-wGQ" eventType="touchUpInside" id="9W5-dZ-cKH"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-3W-NkY">
                                             <rect key="frame" x="11" y="8" width="40" height="40"/>
                                             <state key="normal" title="Button" image="up_arrow.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="upVote:" destination="lR5-5h-wGQ" eventType="touchUpInside" id="jNI-Jn-Uza"/>
+                                            </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="573" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdh-BE-nQO">
+                                            <rect key="frame" x="11" y="50" width="40" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSX-x4-7DE">
+                                            <rect key="frame" x="68" y="12" width="267" height="32.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSz-Lr-Quy">
+                                            <rect key="frame" x="68" y="47" width="524" height="51"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descrip" destination="wSz-Lr-Quy" id="EXI-Mr-hTS"/>
+                                    <outlet property="down" destination="eTn-9k-fRf" id="M1S-fM-vFW"/>
+                                    <outlet property="title" destination="aSX-x4-7DE" id="nSc-Qe-ElE"/>
+                                    <outlet property="up" destination="cdi-3W-NkY" id="yaC-pR-uiF"/>
+                                    <outlet property="votes" destination="cdh-BE-nQO" id="WH5-Nl-YmS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -88,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="369" y="-380"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--What's Good-->
         <scene sceneID="Dwr-g4-bId">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wxt-es-J6m" sceneMemberID="viewController">
+                <navigationController title="What's Good" automaticallyAdjustsScrollViewInsets="NO" id="wxt-es-J6m" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dLZ-s0-Zvu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -119,7 +144,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7vz-nU-aDN"/>
+                    <navigationItem key="navigationItem" title="What's Good" id="7vz-nU-aDN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQf-ql-sNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,6 +170,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="down_arrow.png" width="128" height="128"/>
         <image name="up_arrow.png" width="128" height="128"/>
     </resources>
 </document>
