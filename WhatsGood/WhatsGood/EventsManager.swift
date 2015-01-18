@@ -20,7 +20,7 @@ class EventsManager {
     }
     
     func reloadEvents () {
-        events = [EventItem]()
+        events = [EventItem]() // reloads the stupid way currently
         
         var query = PFQuery(className: "Post")
         var eventObjs = query.findObjects()

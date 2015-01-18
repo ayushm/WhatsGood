@@ -17,21 +17,21 @@ class EventsListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("EventsListCell", forIndexPath: indexPath) as EventTableCell
-        let event = eventsList.events[indexPath.row]
+        cell.event = eventsList.events[indexPath.row]
+        cell.reference = self.tableView
         
-        //set attributes right here
-        eventsList.reloadEvents()
-        cell.setEvent(event, ref: self.tableView)
+        for event in eventsList.events {
+            if event.id == cell.event.id {
+                event.upVotes = cell.event.upVotes
+                event.downVotes = cell.event.downVotes
+                NSLog("hehe bb something worked")
+            }
+        }
+        
+        cell.refresh()
         
         NSLog("at least it refreshed! bb")
         
         return cell
     }
-    
-    /*override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        NSLog("sup")
-        
-        eventsList.reloadEvents()
-        self.tableView.reloadData()
-    }*/
 }
