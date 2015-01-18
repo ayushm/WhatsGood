@@ -18,6 +18,7 @@ class EventItem: NSObject {
     // var location: PFGeoPoint // has latitude, longitude attributes
     var startTime: NSDate
     // var endTime: Date
+    var vote: Int // -1 for not voted, 0 for downvote, 1 for upvote
     
     init (values: PFObject) { // takes the PFObject returned by parse
         self.id = values.valueForKey("objectId") as String
@@ -28,6 +29,7 @@ class EventItem: NSObject {
         // self.location = values["Location"] as PFGeoPoint
         self.startTime = values["startTime"] as NSDate
         // self.endTime = values["endTime"] as Date
+        self.vote = -1
     }
     
     func refresh () { // takes an int 1 = upvote, 0 = downvote
@@ -42,7 +44,6 @@ class EventItem: NSObject {
             }
                 
             event.saveInBackgroundWithTarget(nil, selector: nil)
-            NSLog("saved update")
         }
     }
 }

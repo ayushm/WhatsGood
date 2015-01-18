@@ -24,13 +24,11 @@ class EventsListViewController: UITableViewController {
             if event.id == cell.event.id {
                 event.upVotes = cell.event.upVotes
                 event.downVotes = cell.event.downVotes
-                NSLog("hehe bb something worked")
             }
         }
         
+        eventsList.save()
         cell.refresh()
-        
-        NSLog("at least it refreshed! bb")
         
         return cell
     }

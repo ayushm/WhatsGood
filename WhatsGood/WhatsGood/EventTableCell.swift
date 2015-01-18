@@ -25,7 +25,10 @@ class EventTableCell: UITableViewCell {
     }
     
     @IBAction func upVote(sender: AnyObject) {
-        NSLog("upvote pressed")
+        if self.event.vote != -1 {
+            return
+        }
+        self.event.vote = 1
         self.event.upVotes += 1 // 1 = upvote
         self.event.refresh()
         NSLog(String(self.event.upVotes-self.event.downVotes))
@@ -33,7 +36,10 @@ class EventTableCell: UITableViewCell {
     }
     
     @IBAction func downVote(sender: AnyObject) {
-        NSLog("downvote pressed")
+        if self.event.vote != -1 {
+            return
+        }
+        self.event.vote = 0
         self.event.downVotes += 1// 0 = downvote
         self.event.refresh()
         NSLog(String(self.event.upVotes-self.event.downVotes))
