@@ -13,7 +13,6 @@
 		1AB9ACBC1A6A7ACC00489D30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB9ACBB1A6A7ACC00489D30 /* Images.xcassets */; };
 		1AB9ACBF1A6A7ACC00489D30 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB9ACBD1A6A7ACC00489D30 /* LaunchScreen.xib */; };
 		1AB9ACCB1A6A7ACC00489D30 /* WhatsGoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB9ACCA1A6A7ACC00489D30 /* WhatsGoodTests.swift */; };
-		1AB9ACD51A6A81DC00489D30 /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB9ACD41A6A81DC00489D30 /* EventsListViewController.swift */; };
 		1AB9ACD71A6A884700489D30 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB9ACD61A6A884700489D30 /* Parse.framework */; };
 		1AB9ACD91A6A886D00489D30 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB9ACD81A6A886D00489D30 /* Bolts.framework */; };
 		1AB9ACDB1A6A888B00489D30 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB9ACDA1A6A888B00489D30 /* AudioToolbox.framework */; };
@@ -31,6 +30,14 @@
 		1AB9ACF91A6A9E2B00489D30 /* calendar_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB9ACF81A6A9E2B00489D30 /* calendar_large.png */; };
 		1AB9ACFC1A6AA10200489D30 /* check_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB9ACFA1A6AA10200489D30 /* check_gray.png */; };
 		1AB9ACFD1A6AA10200489D30 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB9ACFB1A6AA10200489D30 /* check.png */; };
+		1ACE8FDC1A6B9924008AF7C1 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE8FD81A6B9923008AF7C1 /* EventItem.swift */; };
+		1ACE8FDD1A6B9924008AF7C1 /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE8FD91A6B9924008AF7C1 /* EventsListViewController.swift */; };
+		1ACE8FDE1A6B9924008AF7C1 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE8FDA1A6B9924008AF7C1 /* EventsManager.swift */; };
+		1ACE8FDF1A6B9924008AF7C1 /* EventTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE8FDB1A6B9924008AF7C1 /* EventTableCell.swift */; };
+		1ACE8FEA1A6B9AE9008AF7C1 /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACE8FE81A6B9AE9008AF7C1 /* down_arrow.png */; };
+		1ACE8FEB1A6B9AE9008AF7C1 /* up_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACE8FE91A6B9AE9008AF7C1 /* up_arrow.png */; };
+		1ACE8FEE1A6B9ED3008AF7C1 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACE8FEC1A6B9ED3008AF7C1 /* green.png */; };
+		1ACE8FEF1A6B9ED3008AF7C1 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACE8FED1A6B9ED3008AF7C1 /* red.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +61,6 @@
 		1AB9ACC41A6A7ACC00489D30 /* WhatsGoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsGoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB9ACC91A6A7ACC00489D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AB9ACCA1A6A7ACC00489D30 /* WhatsGoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsGoodTests.swift; sourceTree = "<group>"; };
-		1AB9ACD41A6A81DC00489D30 /* EventsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
 		1AB9ACD61A6A884700489D30 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = WhatsGood/Parse.framework; sourceTree = "<group>"; };
 		1AB9ACD81A6A886D00489D30 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = WhatsGood/Bolts.framework; sourceTree = "<group>"; };
 		1AB9ACDA1A6A888B00489D30 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -72,6 +78,14 @@
 		1AB9ACF81A6A9E2B00489D30 /* calendar_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar_large.png; path = ../../../../../Downloads/calendar_large.png; sourceTree = "<group>"; };
 		1AB9ACFA1A6AA10200489D30 /* check_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check_gray.png; path = ../../../../../Desktop/Apps/WhatsGood/check_gray.png; sourceTree = "<group>"; };
 		1AB9ACFB1A6AA10200489D30 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check.png; path = ../../../../../Desktop/Apps/WhatsGood/check.png; sourceTree = "<group>"; };
+		1ACE8FD81A6B9923008AF7C1 /* EventItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventItem.swift; path = ../../../../../../Downloads/EventItem.swift; sourceTree = "<group>"; };
+		1ACE8FD91A6B9924008AF7C1 /* EventsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsListViewController.swift; path = ../../../../../../Downloads/EventsListViewController.swift; sourceTree = "<group>"; };
+		1ACE8FDA1A6B9924008AF7C1 /* EventsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsManager.swift; path = ../../../../../../Downloads/EventsManager.swift; sourceTree = "<group>"; };
+		1ACE8FDB1A6B9924008AF7C1 /* EventTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTableCell.swift; path = ../../../../../../Downloads/EventTableCell.swift; sourceTree = "<group>"; };
+		1ACE8FE81A6B9AE9008AF7C1 /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = down_arrow.png; path = ../../../../../Downloads/down_arrow.png; sourceTree = "<group>"; };
+		1ACE8FE91A6B9AE9008AF7C1 /* up_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = up_arrow.png; path = ../../../../../Downloads/up_arrow.png; sourceTree = "<group>"; };
+		1ACE8FEC1A6B9ED3008AF7C1 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = ../../../../../Downloads/green.png; sourceTree = "<group>"; };
+		1ACE8FED1A6B9ED3008AF7C1 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = ../../../../../Downloads/red.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,9 +142,12 @@
 		1AB9ACB11A6A7ACB00489D30 /* WhatsGood */ = {
 			isa = PBXGroup;
 			children = (
+				1ACE8FD81A6B9923008AF7C1 /* EventItem.swift */,
+				1ACE8FD91A6B9924008AF7C1 /* EventsListViewController.swift */,
+				1ACE8FDA1A6B9924008AF7C1 /* EventsManager.swift */,
+				1ACE8FDB1A6B9924008AF7C1 /* EventTableCell.swift */,
 				1AB9ACB41A6A7ACC00489D30 /* AppDelegate.swift */,
 				1AB9ACB61A6A7ACC00489D30 /* NewEventViewController.swift */,
-				1AB9ACD41A6A81DC00489D30 /* EventsListViewController.swift */,
 				1AB9ACB81A6A7ACC00489D30 /* Main.storyboard */,
 				1AB9ACF11A6A92C200489D30 /* EventViewController.swift */,
 				1AB9ACBB1A6A7ACC00489D30 /* Images.xcassets */,
@@ -188,6 +205,10 @@
 		1AB9ACF51A6A9CC400489D30 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1ACE8FEC1A6B9ED3008AF7C1 /* green.png */,
+				1ACE8FED1A6B9ED3008AF7C1 /* red.png */,
+				1ACE8FE81A6B9AE9008AF7C1 /* down_arrow.png */,
+				1ACE8FE91A6B9AE9008AF7C1 /* up_arrow.png */,
 				1AB9ACFA1A6AA10200489D30 /* check_gray.png */,
 				1AB9ACFB1A6AA10200489D30 /* check.png */,
 				1AB9ACF81A6A9E2B00489D30 /* calendar_large.png */,
@@ -277,10 +298,14 @@
 			files = (
 				1AB9ACFD1A6AA10200489D30 /* check.png in Resources */,
 				1AB9ACBA1A6A7ACC00489D30 /* Main.storyboard in Resources */,
+				1ACE8FEB1A6B9AE9008AF7C1 /* up_arrow.png in Resources */,
+				1ACE8FEF1A6B9ED3008AF7C1 /* red.png in Resources */,
+				1ACE8FEE1A6B9ED3008AF7C1 /* green.png in Resources */,
 				1AB9ACF91A6A9E2B00489D30 /* calendar_large.png in Resources */,
 				1AB9ACFC1A6AA10200489D30 /* check_gray.png in Resources */,
 				1AB9ACBF1A6A7ACC00489D30 /* LaunchScreen.xib in Resources */,
 				1AB9ACBC1A6A7ACC00489D30 /* Images.xcassets in Resources */,
+				1ACE8FEA1A6B9AE9008AF7C1 /* down_arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +324,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB9ACB71A6A7ACC00489D30 /* NewEventViewController.swift in Sources */,
+				1ACE8FDF1A6B9924008AF7C1 /* EventTableCell.swift in Sources */,
+				1ACE8FDE1A6B9924008AF7C1 /* EventsManager.swift in Sources */,
+				1ACE8FDD1A6B9924008AF7C1 /* EventsListViewController.swift in Sources */,
 				1AB9ACF21A6A92C200489D30 /* EventViewController.swift in Sources */,
-				1AB9ACD51A6A81DC00489D30 /* EventsListViewController.swift in Sources */,
+				1ACE8FDC1A6B9924008AF7C1 /* EventItem.swift in Sources */,
 				1AB9ACB51A6A7ACC00489D30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
