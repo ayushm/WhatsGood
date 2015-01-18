@@ -28,6 +28,9 @@
 		1AB9ACED1A6A89F300489D30 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB9ACEC1A6A89F300489D30 /* libz.dylib */; };
 		1AB9ACEF1A6A89FD00489D30 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB9ACEE1A6A89FD00489D30 /* libsqlite3.dylib */; };
 		1AB9ACF21A6A92C200489D30 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB9ACF11A6A92C200489D30 /* EventViewController.swift */; };
+		1AB9ACF91A6A9E2B00489D30 /* calendar_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB9ACF81A6A9E2B00489D30 /* calendar_large.png */; };
+		1AB9ACFC1A6AA10200489D30 /* check_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB9ACFA1A6AA10200489D30 /* check_gray.png */; };
+		1AB9ACFD1A6AA10200489D30 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB9ACFB1A6AA10200489D30 /* check.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		1AB9ACEC1A6A89F300489D30 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1AB9ACEE1A6A89FD00489D30 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		1AB9ACF11A6A92C200489D30 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		1AB9ACF81A6A9E2B00489D30 /* calendar_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar_large.png; path = ../../../../../Downloads/calendar_large.png; sourceTree = "<group>"; };
+		1AB9ACFA1A6AA10200489D30 /* check_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check_gray.png; path = ../../../../../Desktop/Apps/WhatsGood/check_gray.png; sourceTree = "<group>"; };
+		1AB9ACFB1A6AA10200489D30 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check.png; path = ../../../../../Desktop/Apps/WhatsGood/check.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 		1AB9ACA61A6A7ACB00489D30 = {
 			isa = PBXGroup;
 			children = (
+				1AB9ACF51A6A9CC400489D30 /* Images */,
 				1AB9ACF01A6A8A0A00489D30 /* Frameworks */,
 				1AB9ACB11A6A7ACB00489D30 /* WhatsGood */,
 				1AB9ACC71A6A7ACC00489D30 /* WhatsGoodTests */,
@@ -176,6 +183,16 @@
 				1AB9ACDA1A6A888B00489D30 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AB9ACF51A6A9CC400489D30 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1AB9ACFA1A6AA10200489D30 /* check_gray.png */,
+				1AB9ACFB1A6AA10200489D30 /* check.png */,
+				1AB9ACF81A6A9E2B00489D30 /* calendar_large.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +275,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB9ACFD1A6AA10200489D30 /* check.png in Resources */,
 				1AB9ACBA1A6A7ACC00489D30 /* Main.storyboard in Resources */,
+				1AB9ACF91A6A9E2B00489D30 /* calendar_large.png in Resources */,
+				1AB9ACFC1A6AA10200489D30 /* check_gray.png in Resources */,
 				1AB9ACBF1A6A7ACC00489D30 /* LaunchScreen.xib in Resources */,
 				1AB9ACBC1A6A7ACC00489D30 /* Images.xcassets in Resources */,
 			);
