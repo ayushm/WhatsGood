@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wxt-es-J6m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c7H-R5-8Vu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--New Event View Controller-->
+        <!--What's Good?-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NewEventViewController" customModule="WhatsGood" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,13 +16,144 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Event Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BwF-0A-jJG">
+                                <rect key="frame" x="26" y="74" width="548" height="40"/>
+                                <color key="backgroundColor" red="0.99328046780000001" green="1" blue="0.98307833680000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8o7-ZH-eGu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Event Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4aK-hp-NV6">
+                                <rect key="frame" x="26" y="124" width="548" height="40"/>
+                                <color key="backgroundColor" red="0.99328046780000001" green="1" blue="0.98307833680000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EuC-iQ-v4w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yfl-5m-8YC">
+                                <rect key="frame" x="116" y="174" width="368" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8fS-4Z-VeL"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Start Time"/>
+                                    <segment title="End Time"/>
+                                </segments>
+                                <connections>
+                                    <action selector="timeSwitchedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="LsG-95-8tC"/>
+                                </connections>
+                            </segmentedControl>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="j4s-al-qmV">
+                                <rect key="frame" x="26" y="218" width="548" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="5aJ-YA-eqe"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="443199485.172135">
+                                    <!--2015-01-17 14:58:05 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="443271600">
+                                    <!--2015-01-18 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="446814000">
+                                    <!--2015-02-28 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Address or Key Word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U25-pl-Utt">
+                                <rect key="frame" x="26" y="394" width="548" height="40"/>
+                                <color key="backgroundColor" red="0.99328046780000001" green="1" blue="0.98307833680000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4Ma-cj-L22"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="addressEntered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="nXV-sa-ZKW"/>
+                                    <action selector="addressGainedFocus:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="DWB-zz-gD4"/>
+                                </connections>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FB8-w7-M7W">
+                                <rect key="frame" x="26" y="449" width="548" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="zHJ-jT-MPq"/>
+                                </constraints>
+                            </mapView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8eC-QJ-RIB">
+                                <rect key="frame" x="26" y="218" width="548" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="V85-2w-EGS"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="443199909.42021298">
+                                    <!--2015-01-17 15:05:09 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="443271600">
+                                    <!--2015-01-18 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="446814000">
+                                    <!--2015-02-28 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="endTimeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mQI-Z9-Vg7"/>
+                                    <action selector="startTimeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fVg-it-R5e"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.8200433495084023" blue="0.55262692040139183" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FB8-w7-M7W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="0PK-NE-CDy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FB8-w7-M7W" secondAttribute="trailing" constant="10" id="4B4-nA-OfI"/>
+                            <constraint firstItem="8eC-QJ-RIB" firstAttribute="top" secondItem="yfl-5m-8YC" secondAttribute="bottom" constant="35" id="4Zp-JO-POv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BwF-0A-jJG" secondAttribute="trailing" constant="10" id="94e-W0-gWe"/>
+                            <constraint firstItem="yfl-5m-8YC" firstAttribute="top" secondItem="4aK-hp-NV6" secondAttribute="bottom" constant="10" id="IjG-rQ-c9A"/>
+                            <constraint firstItem="BwF-0A-jJG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Ir5-Lz-Olx"/>
+                            <constraint firstItem="4aK-hp-NV6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="LVu-sM-50h"/>
+                            <constraint firstItem="BwF-0A-jJG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="MZ6-7p-WGK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U25-pl-Utt" secondAttribute="trailing" constant="10" id="PQc-bS-voM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j4s-al-qmV" secondAttribute="trailing" constant="10" id="Qhp-2T-jmh"/>
+                            <constraint firstItem="yfl-5m-8YC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="SFD-3U-zLV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4aK-hp-NV6" secondAttribute="trailing" constant="10" id="V7a-k5-kEZ"/>
+                            <constraint firstItem="U25-pl-Utt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Y3M-ai-7vM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8eC-QJ-RIB" secondAttribute="trailing" constant="10" id="dCl-i5-Jf4"/>
+                            <constraint firstItem="U25-pl-Utt" firstAttribute="top" secondItem="8eC-QJ-RIB" secondAttribute="bottom" constant="35" id="ely-Md-ytn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yfl-5m-8YC" secondAttribute="trailing" constant="100" id="joW-ex-oHq"/>
+                            <constraint firstItem="4aK-hp-NV6" firstAttribute="top" secondItem="BwF-0A-jJG" secondAttribute="bottom" constant="10" id="mp9-Pc-vvn"/>
+                            <constraint firstItem="j4s-al-qmV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="oiC-5c-uwL"/>
+                            <constraint firstItem="FB8-w7-M7W" firstAttribute="top" secondItem="U25-pl-Utt" secondAttribute="bottom" constant="15" id="puf-mQ-Mvd"/>
+                            <constraint firstItem="j4s-al-qmV" firstAttribute="top" secondItem="yfl-5m-8YC" secondAttribute="bottom" constant="35" id="sG2-7z-85M"/>
+                            <constraint firstItem="8eC-QJ-RIB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="sHN-Op-lKm"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LWf-6N-M9P"/>
+                    <navigationItem key="navigationItem" title="What's Good?" id="LWf-6N-M9P">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8gF-3d-XxA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="WQC-vI-CcE">
+                            <connections>
+                                <action selector="saveNewEvent:" destination="BYZ-38-t0r" id="PwP-M0-rWV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addressTextField" destination="U25-pl-Utt" id="YsK-Kn-2bk"/>
+                        <outlet property="descriptionTextField" destination="4aK-hp-NV6" id="W1h-SU-alX"/>
+                        <outlet property="endTimePicker" destination="8eC-QJ-RIB" id="FWq-th-Syl"/>
+                        <outlet property="mapView" destination="FB8-w7-M7W" id="K9a-m5-Moz"/>
+                        <outlet property="startTimePicker" destination="j4s-al-qmV" id="wXb-Gg-wk3"/>
+                        <outlet property="timeSwitch" destination="yfl-5m-8YC" id="h5i-AZ-Vm9"/>
+                        <outlet property="titleTextField" destination="BwF-0A-jJG" id="pP5-7Q-WS1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6tm-7V-Frg">
+                    <connections>
+                        <action selector="viewTapped:" destination="BYZ-38-t0r" id="18S-NY-gpR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="460" y="605"/>
+            <point key="canvasLocation" x="460" y="595"/>
         </scene>
         <!--Events List View Controller-->
         <scene sceneID="1fd-6l-pbw">
