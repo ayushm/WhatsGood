@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C6AAA8BD-0EA1-4F37-8C72-5FB10F0CD7C3</string>
+	<string>DAD87BF4-D139-4267-B937-CD85E42CD9C7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>WhatsGood</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>204F020F511D78C79F67C92C9ED748B782D01CC5</key>
-		<string>https://github.com/ayushm/WhatsGood.git</string>
+		<string>github.com:ayushm/WhatsGood.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>WhatsGood/WhatsGood.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/ayushm/WhatsGood.git</string>
+	<string>github.com:ayushm/WhatsGood.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
